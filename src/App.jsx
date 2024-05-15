@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
 import GlobalStyles, { Container } from "./styles/GlobalStyles";
-import Login from "./components/login/Login";
+import Login from "./components/Login/Login";
 
 const App = () => {
   return (
@@ -15,9 +15,9 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login/*" element={<Login />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

@@ -10,9 +10,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    padding-top: 4rem;
     font-family: 'Montserrat';
     font-weight: 400;
-    color: #252525;
+    /* color: #252525; */
+    color: ${(props) => props.theme.colors.black};
   }
 
   h1, h2, h3, h4 {
@@ -26,16 +28,26 @@ const GlobalStyles = createGlobalStyle`
     margin: 0
   }
 
+  a {
+    text-decoration: none;
+  }
+
 img {
   display: block;
   max-width: 100%;
 }
+
+
+
+
 
 button, input {
   display: block;
   font-size: 1.25rem;
   
 }
+
+
 `;
 
 //STYLED COMPONENTS STYLES
