@@ -1,26 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Navbar,
   NavbarLink,
   NavbarContainer,
-  Logo,
-  Usuario,
+  LogoSVG,
+  UsuarioSVG,
 } from "./HeaderStyles";
 
+import { UserContext } from "../../UserContext";
+
 const Header = () => {
+  const { data } = React.useContext(UserContext);
   return (
     <>
       <Navbar>
         <NavbarContainer>
           <NavbarLink to="/" aria-label="Logo">
-            <Logo />
+            <LogoSVG />
           </NavbarLink>
-
-          <NavbarLink to="/login" className="login">
-            Login
-            <Usuario />
-          </NavbarLink>
+          {data ? (
+            <NavbarLink to="/conta" className="login">
+              <strong>{data.nome}</strong>
+              <UsuarioSVG />
+            </NavbarLink>
+          ) : (
+            <NavbarLink to="/login" className="login">
+              Login / Criar conta
+              <UsuarioSVG />
+            </NavbarLink>
+          )}
         </NavbarContainer>
       </Navbar>
     </>

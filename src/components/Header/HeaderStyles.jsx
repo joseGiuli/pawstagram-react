@@ -4,12 +4,12 @@ import { Container } from "../../styles/GlobalStyles";
 import { ReactComponent as LogoAsset } from "../../assets/dogs.svg";
 import { ReactComponent as UserAsset } from "../../assets/usuario.svg";
 
-export const Logo = styled(LogoAsset)`
+export const LogoSVG = styled(LogoAsset)`
   width: max-content;
   height: max-content;
 `;
 
-export const Usuario = styled(UserAsset)`
+export const UsuarioSVG = styled(UserAsset)`
   width: max-content;
   height: max-content;
   margin-left: 0.5rem;
