@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
 import styled from "styled-components";
 
 //CSS GLOBAL STYLES
@@ -11,13 +11,13 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     padding-top: 4rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    /* color: #252525; */
     color: ${(props) => props.theme.colors.black};
   }
 
   h1, h2, h3, h4 {
+    font-family: "Comfortaa", sans-serif;
     margin: 0;
 
   }
@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: white;
   }
 
 img {
@@ -37,16 +38,11 @@ img {
   max-width: 100%;
 }
 
-
-
-
-
 button, input {
   display: block;
   font-size: 1.25rem;
   
 }
-
 
 `;
 
@@ -55,6 +51,19 @@ export const Container = styled.div`
   max-width: 75rem;
   padding: 0 1rem;
   margin: 0 auto;
+`;
+
+export const animeLeft = keyframes`
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+`;
+
+export const AnimationContainer = styled.div`
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: ${animeLeft} 0.5s forwards;
 `;
 
 export default GlobalStyles;
