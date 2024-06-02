@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const ButtonStyled = styled.button`
   position: relative;
   border: none;
-  min-width: 8rem;
+  width: fit-content;
   overflow: hidden;
   z-index: 1;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 4.25rem;
   border-radius: 0.5rem;
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   transition: all 0.3s;
   cursor: pointer;

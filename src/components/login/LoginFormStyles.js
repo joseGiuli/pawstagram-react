@@ -1,40 +1,41 @@
 import styled from "styled-components";
+import { FormStyled } from "../../styles/GlobalStyles";
 
-export const CadastroWrapper = styled.div`
-  /* position: relative;
-    margin-bottom: 1rem;
-    &::after {
-      content: "";
-      width: 40px;
-      border-radius: 6px;
-      height: 4px;
-      display: block;
-      background-color: ${(props) => props.theme.colors.orange};
-      left: 0;
-      top: 50%;
-    } */
+export const RegistrarWrapper = styled.span`
+  color: ${(props) => props.theme.colors.blue};
 
-  .esqueci {
-    font-size: 1rem;
+  a {
     color: ${(props) => props.theme.colors.blue};
-    display: block;
-    margin-bottom: 1.5rem;
+    font-weight: 600;
+    transition: ease-in 0.2s;
+
     &:hover {
-      opacity: 0.8;
+      opacity: 0.75;
+      text-decoration: underline;
+      transition: ease-out 0.2s;
     }
   }
 `;
 
-export const FormStyled = styled.form`
-  margin-bottom: 1.5rem;
-`;
+export const LoginFormStyled = styled(FormStyled)`
+  .esqueci {
+    font-size: 1rem;
+    align-self: flex-end;
+    display: block;
+    color: ${(props) => props.theme.colors.blue};
+    transition: ease-in 0.2s;
 
-export const LoginSection = styled.section`
-  padding: 2rem;
+    &:hover {
+      opacity: 0.75;
+      text-decoration: underline;
+      transition: ease-out 0.2s;
+    }
+  }
 `;
 
 export const FormWrapper = styled.div`
   overflow: hidden;
+  min-height: 100vh;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
   display: grid;
@@ -44,6 +45,10 @@ export const FormWrapper = styled.div`
   gap: 2rem;
   width: min(100%, 1200px);
   margin: 0 auto;
+
+  @media (max-width: 64rem) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const BackgroundComponent = styled.div`

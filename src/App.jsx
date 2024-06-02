@@ -8,12 +8,12 @@ import GlobalStyles, {
   AnimationContainer,
   Container,
 } from "./styles/GlobalStyles";
-import Login from "./components/login/Login";
+import Login from "./components/Login/Login";
 import { UserStorage } from "./UserContext";
 
 const App = () => {
   return (
-    <div>
+    <>
       <GlobalStyles />
       <BrowserRouter>
         <UserStorage>
@@ -25,7 +25,7 @@ const App = () => {
           {/* <Footer /> */}
         </UserStorage>
       </BrowserRouter>
-    </div>
+    </>
   );
 };
 

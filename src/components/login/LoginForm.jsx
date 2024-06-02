@@ -4,14 +4,13 @@ import Input from "../Forms/Input/Input";
 import Button from "../Forms/Button/Button";
 import useForm from "../../Hooks/useForm";
 import { UserContext } from "../../UserContext";
-import { AnimationContainer } from "../../styles/GlobalStyles";
+import { AnimationContainer, Section } from "../../styles/GlobalStyles";
 import Error from "../Helpers/Error";
 import {
-  CadastroWrapper,
-  FormStyled,
-  LoginSection,
   FormWrapper,
   BackgroundComponent,
+  RegistrarWrapper,
+  LoginFormStyled,
 } from "./LoginFormStyles";
 import Paragraph from "../../ui/typography/Paragraph";
 import Title from "../../ui/typography/Title";
@@ -31,11 +30,11 @@ const LoginForm = () => {
   }
 
   return (
-    <LoginSection>
+    <Section>
       <FormWrapper>
         <AnimationContainer>
           <Title margin="0 0 1.5rem">Login</Title>
-          <FormStyled action="" onSubmit={handleSubmit}>
+          <LoginFormStyled action="" onSubmit={handleSubmit}>
             <Input label="Usuario" type="text" name="username" {...username} />
             <Input
               label="Senha"
@@ -43,32 +42,25 @@ const LoginForm = () => {
               name="password"
               {...password}
             />
+            <Link to="/esqueci-a-senha" className="esqueci">
+              Esqueci a senha
+            </Link>
             {loading ? (
               <Button disabled>Carregando...</Button>
             ) : (
               <Button>Entrar</Button>
             )}
             <Error error={error} />
-          </FormStyled>
-          <CadastroWrapper>
-            <Link to="/login/criar" className="esqueci">
-              Esqueci a senha
-            </Link>
-
-            <Subtitle>Cadastre-se!</Subtitle>
-            <Paragraph>
-              Ainda não possui conta? cadastre-se agora mesmo!
-            </Paragraph>
-            <Button>
-              <Link to="/esqueci-a-senha">Cadastro</Link>
-            </Button>
-          </CadastroWrapper>
+          </LoginFormStyled>
+          <RegistrarWrapper>
+            Não tem uma conta? <Link to="/login/criar">Registre-se agora!</Link>
+          </RegistrarWrapper>
         </AnimationContainer>
         <div>
           <BackgroundComponent />
         </div>
       </FormWrapper>
-    </LoginSection>
+    </Section>
   );
 };
 

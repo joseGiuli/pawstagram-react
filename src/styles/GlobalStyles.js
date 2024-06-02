@@ -53,6 +53,17 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
+export const Section = styled.section`
+  padding: 2rem;
+`;
+
+export const FormStyled = styled.form`
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+`;
+
 export const animeLeft = keyframes`
   to {
     opacity: 1;
