@@ -13,9 +13,9 @@ export const InputStyled = styled.input`
   &:hover {
     outline: none;
     transition: all 0.2s;
-    border: solid 2px #d8d8d8;
+    border: solid 2px rgba(10, 55, 110, 0.8);
     background-color: white;
-    box-shadow: 10px 10px 12px -12px rgba(190, 190, 190, 0.75);
+    box-shadow: 10px 10px 15px -10px rgba(10, 55, 110, 0.25);
   }
 `;
 

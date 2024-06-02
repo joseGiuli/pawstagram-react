@@ -30,10 +30,28 @@ export const FormStyled = styled.form`
 `;
 
 export const LoginSection = styled.section`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  min-height: 100vh;
-  gap: 2rem;
+  padding: 2rem;
 `;
 
-export const FormWrapper = styled.div``;
+export const FormWrapper = styled.div`
+  overflow: hidden;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  display: grid;
+  border: solid 1px #f1f1f1;
+  border-radius: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+`;
+
+export const BackgroundComponent = styled.div`
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/bg-login.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;

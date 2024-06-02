@@ -8,7 +8,7 @@ import GlobalStyles, {
   AnimationContainer,
   Container,
 } from "./styles/GlobalStyles";
-import Login from "./components/Login/Login";
+import Login from "./components/login/Login";
 import { UserStorage } from "./UserContext";
 
 const App = () => {

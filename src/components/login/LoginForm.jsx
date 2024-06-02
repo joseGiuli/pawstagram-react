@@ -11,6 +11,7 @@ import {
   FormStyled,
   LoginSection,
   FormWrapper,
+  BackgroundComponent,
 } from "./LoginFormStyles";
 import Paragraph from "../../ui/typography/Paragraph";
 import Title from "../../ui/typography/Title";
@@ -63,6 +64,9 @@ const LoginForm = () => {
             </Button>
           </CadastroWrapper>
         </AnimationContainer>
+        <div>
+          <BackgroundComponent />
+        </div>
       </FormWrapper>
     </LoginSection>
   );

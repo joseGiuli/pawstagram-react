@@ -33,6 +33,9 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavbarLink = styled(Link)`
+color: red;
+
+
   &:hover,
   &:focus {
     scale: 1.1;

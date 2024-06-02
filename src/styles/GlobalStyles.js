@@ -61,6 +61,8 @@ export const animeLeft = keyframes`
 `;
 
 export const AnimationContainer = styled.div`
+  padding: 2rem;
+
   opacity: 0;
   transform: translateX(-100%);
   animation: ${animeLeft} 0.5s forwards;
