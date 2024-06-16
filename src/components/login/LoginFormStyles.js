@@ -7,35 +7,35 @@ export const RegistrarWrapper = styled.span`
   a {
     color: ${(props) => props.theme.colors.blue};
     font-weight: 600;
-    transition: ease-in 0.2s;
+    transition: ease-out 0.2s;
 
     &:hover {
       opacity: 0.75;
       text-decoration: underline;
-      transition: ease-out 0.2s;
+      transition: ease-in 0.2s;
     }
   }
 `;
 
 export const LoginFormStyled = styled(FormStyled)`
-  .esqueci {
+  a {
     font-size: 1rem;
+    font-weight: 600;
     align-self: flex-end;
     display: block;
     color: ${(props) => props.theme.colors.blue};
-    transition: ease-in 0.2s;
+    transition: ease-out 0.2s;
 
     &:hover {
       opacity: 0.75;
       text-decoration: underline;
-      transition: ease-out 0.2s;
+      transition: ease-in 0.2s;
     }
   }
 `;
 
 export const FormWrapper = styled.div`
-  overflow: hidden;
-  min-height: 100vh;
+  /* min-height: 100vh;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
   display: grid;
@@ -48,15 +48,5 @@ export const FormWrapper = styled.div`
 
   @media (max-width: 64rem) {
     grid-template-columns: 1fr;
-  }
-`;
-
-export const BackgroundComponent = styled.div`
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/bg-login.png");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  } */
 `;

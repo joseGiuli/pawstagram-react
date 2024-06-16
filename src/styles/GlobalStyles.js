@@ -53,9 +53,7 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const Section = styled.section`
-  padding: 2rem;
-`;
+export const Section = styled.section``;
 
 export const FormStyled = styled.form`
   margin-bottom: 1.5rem;
@@ -71,7 +69,7 @@ export const animeLeft = keyframes`
   }
 `;
 
-export const AnimationContainer = styled.div`
+export const SectionAnimated = styled.div`
   padding: 2rem;
 
   opacity: 0;

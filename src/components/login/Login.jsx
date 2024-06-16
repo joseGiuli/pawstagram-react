@@ -6,20 +6,24 @@ import LoginCreate from "./LoginCreate";
 import LoginResetPassword from "./LoginResetPassword";
 import LoginLostPassword from "./LoginLostPassword";
 import { UserContext } from "../../UserContext";
+import { LoginSection, LoginWrapper } from "./LoginStyles";
+import { Section } from "../../styles/GlobalStyles";
 
 const Login = () => {
   const { login } = React.useContext(UserContext);
 
   if (login === true) return <Navigate to="/conta" />;
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="criar-conta" element={<LoginCreate />} />
-        <Route path="esqueci-a-senha" element={<LoginLostPassword />} />
-        <Route path="alterar-senha" element={<LoginResetPassword />} />
-      </Routes>
-    </div>
+    <LoginSection>
+      <LoginWrapper>
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="criar-conta" element={<LoginCreate />} />
+          <Route path="esqueci-a-senha" element={<LoginLostPassword />} />
+          <Route path="alterar-senha" element={<LoginResetPassword />} />
+        </Routes>
+      </LoginWrapper>
+    </LoginSection>
   );
 };
 
