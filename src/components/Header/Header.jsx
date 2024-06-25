@@ -10,7 +10,7 @@ import {
 import { UserContext } from "../../UserContext";
 
 const Header = () => {
-  const { data, userLogout } = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
   return (
     <>
       <Navbar>
@@ -23,7 +23,6 @@ const Header = () => {
               <NavbarLink to="/conta" className="login">
                 <strong>{data.nome}</strong>
                 <UsuarioSVG />
-                <button onClick={userLogout}>Sair</button>
               </NavbarLink>
             </>
           ) : (
