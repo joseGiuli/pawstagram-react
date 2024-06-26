@@ -1,39 +1,56 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Button from "../Forms/Button/Button";
-import { ButtonStyled } from "../Forms/Button/ButtonStyles";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   EstatisticasSVG,
+  ExitButton,
   FeedSVG,
   LogoutSVG,
   NavWrapper,
   PostarSVG,
   StyledNavLink,
 } from "./UserNavHeaderStyles";
-import styled from "styled-components";
 import { UserContext } from "../../UserContext";
 
 const UserNavHeader = () => {
+  const navLinks = [
+    {
+      to: "/conta/feed",
+      icon: FeedSVG,
+      label: "Minhas Fotos",
+    },
+    {
+      to: "/conta/estatisticas",
+      icon: EstatisticasSVG,
+      label: "Estatísticas",
+    },
+    {
+      to: "/conta/postar",
+      icon: PostarSVG,
+      label: "Adicionar fotos",
+    },
+  ];
+
   const { userLogout } = React.useContext(UserContext);
+  const [mobile, setMobile] = React.useState(null);
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    userLogout();
+    navigate("/login");
+  }
 
   return (
     <NavWrapper>
-      <StyledNavLink to="/conta">
-        <FeedSVG />
-        Minhas Fotos
-      </StyledNavLink>
-      <StyledNavLink to="/conta/estatisticas">
-        <EstatisticasSVG />
-        Estatísticas
-      </StyledNavLink>
-      <StyledNavLink to="/conta/postar">
-        <PostarSVG />
-        Adicionar Fotos
-      </StyledNavLink>
-      <ButtonStyled onClick={userLogout}>
+      {navLinks.map((link, index) => (
+        <StyledNavLink key={index} to={link.to}>
+          <link.icon />
+          {mobile && link.label}
+        </StyledNavLink>
+      ))}
+      <ExitButton onClick={handleLogout}>
         <LogoutSVG />
-        air
-      </ButtonStyled>
+        {mobile && "Sair"}
+      </ExitButton>
     </NavWrapper>
   );
 };
