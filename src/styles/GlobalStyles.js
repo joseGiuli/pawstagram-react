@@ -1,5 +1,6 @@
 import { createGlobalStyle, keyframes } from "styled-components";
 import styled from "styled-components";
+import { ButtonStyled } from "../components/Forms/Button/ButtonStyles";
 
 //CSS GLOBAL STYLES
 const GlobalStyles = createGlobalStyle`
@@ -64,6 +65,10 @@ export const FormStyled = styled.form`
   display: flex;
   gap: 0.75rem;
   flex-direction: column;
+
+  ${ButtonStyled} {
+    margin-top: 1.25rem;
+  }
 `;
 
 export const animeLeft = keyframes`

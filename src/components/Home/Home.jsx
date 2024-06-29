@@ -1,10 +1,12 @@
 import React from "react";
+import { SectionStyled } from "../User/UserPhotoPostStyles";
+import Feed from "../Feed/Feed";
 
 const Home = () => {
   return (
-    <div>
-      <h1>HOME</h1>
-    </div>
+    <SectionStyled>
+      <Feed />
+    </SectionStyled>
   );
 };
 
