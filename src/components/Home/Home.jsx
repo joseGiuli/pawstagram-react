@@ -1,12 +1,15 @@
 import React from "react";
-import { SectionStyled } from "../User/UserPhotoPostStyles";
 import Feed from "../Feed/Feed";
+import { Section } from "./HomeStyles";
+import { Container } from "../../styles/GlobalStyles";
 
 const Home = () => {
   return (
-    <SectionStyled>
-      <Feed />
-    </SectionStyled>
+    <Section>
+      <Container>
+        <Feed />
+      </Container>
+    </Section>
   );
 };
 

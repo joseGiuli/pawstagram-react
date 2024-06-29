@@ -33,8 +33,7 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavbarLink = styled(Link)`
-color: red;
-
+  color: red;
 
   &:hover,
   &:focus {

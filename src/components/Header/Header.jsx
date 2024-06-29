@@ -16,7 +16,7 @@ const Header = () => {
       <Navbar>
         <NavbarContainer>
           <NavbarLink to="/" aria-label="Logo">
-            <LogoSVG />
+            <LogoSVG size="44px" />
           </NavbarLink>
           {data ? (
             <>
