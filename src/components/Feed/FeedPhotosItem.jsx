@@ -1,9 +1,13 @@
 import React from "react";
 import { ListItem, VisualizacaoSVG } from "./FeedPhotosItemStyles";
 
-const FeedPhotosItem = ({ photo }) => {
+const FeedPhotosItem = ({ photo, setModalPhoto }) => {
+  function handleClick() {
+    setModalPhoto(photo);
+  }
+
   return (
-    <ListItem>
+    <ListItem onClick={handleClick}>
       <img src={photo.src} alt={photo.title} />
       <span>
         <VisualizacaoSVG />

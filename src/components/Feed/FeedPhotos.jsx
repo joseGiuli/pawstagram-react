@@ -7,7 +7,7 @@ import Loading from "../Helpers/Loading";
 import { ListWrapper } from "./FeedPhotosStyles";
 import { Container } from "../../styles/GlobalStyles";
 
-const FeedPhotos = () => {
+const FeedPhotos = ({ setModalPhoto }) => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
@@ -25,7 +25,11 @@ const FeedPhotos = () => {
     return (
       <ListWrapper>
         {data.map((photo) => (
-          <FeedPhotosItem key={photo.id} photo={photo} />
+          <FeedPhotosItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
         ))}
       </ListWrapper>
     );
