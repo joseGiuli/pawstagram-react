@@ -34,8 +34,8 @@ const PhotoContent = ({ data }) => {
           <Item>{photo.peso}kg</Item>
           <Item>{photo.peso}anos</Item>
         </Atributos>
+        <PhotoComments id={photo.id} comments={comments} />
       </ImageDetails>
-      <PhotoComments id={photo.id} comments={comments} />
     </PhotoContentWrapper>
   );
 };

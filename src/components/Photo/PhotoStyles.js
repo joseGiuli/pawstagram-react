@@ -50,6 +50,7 @@ export const ImageDetails = styled.div`
 
 export const Titulo = styled.h2`
   font-size: 3rem;
+  position: relative;
   a {
     color: ${(props) => props.theme.colors.black};
   }
