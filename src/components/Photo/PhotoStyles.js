@@ -45,7 +45,9 @@ export const ImageContainer = styled.div`
 `;
 
 export const ImageDetails = styled.div`
-  padding: 2rem 2rem 0 2rem;
+  padding: 1.25rem;
+  overflow-y: auto;
+  word-break: break-all;
 `;
 
 export const Titulo = styled.h2`

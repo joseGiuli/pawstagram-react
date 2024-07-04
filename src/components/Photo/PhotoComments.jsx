@@ -6,10 +6,15 @@ import { CommentItem, CommentList } from "./PhotoCommentsStyles";
 const PhotoComments = (props) => {
   const [comments, setComments] = React.useState(() => props.comments);
   const { login } = React.useContext(UserContext);
+  const commentsSection = React.useRef(null);
+
+  React.useEffect(() => {
+    commentsSection.current.scrollTop = 200;
+  }, [comments]);
 
   return (
     <>
-      <CommentList>
+      <CommentList ref={commentsSection}>
         {comments.map((comment) => (
           <CommentItem key={comment.comment_ID}>
             <b>{comment.comment_author}: </b>
