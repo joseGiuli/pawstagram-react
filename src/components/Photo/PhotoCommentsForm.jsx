@@ -25,19 +25,21 @@ const PhotoCommentsForm = ({ id, setComments }) => {
     }
   }
   return (
-    <CommentsForm onSubmit={handleSubmit}>
-      <TextArea
-        id="comment"
-        name="comment"
-        placeholder="Digite aqui..."
-        value={comment}
-        onChange={({ target }) => setComment(target.value)}
-      />
-      <CommentsButton>
-        <EnviarSVG />
-      </CommentsButton>
-      <Error error={error} />
-    </CommentsForm>
+    <>
+      <CommentsForm onSubmit={handleSubmit}>
+        <TextArea
+          id="comment"
+          name="comment"
+          placeholder="Digite aqui..."
+          value={comment}
+          onChange={({ target }) => setComment(target.value)}
+        />
+        <CommentsButton>
+          <EnviarSVG />
+        </CommentsButton>
+        <Error error={error} />
+      </CommentsForm>
+    </>
   );
 };
 

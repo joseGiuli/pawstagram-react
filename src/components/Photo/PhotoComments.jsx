@@ -9,7 +9,7 @@ const PhotoComments = (props) => {
   const commentsSection = React.useRef(null);
 
   React.useEffect(() => {
-    commentsSection.current.scrollTop = 200;
+    commentsSection.current.scrollTop = commentsSection.current.scrollHeight;
   }, [comments]);
 
   return (
