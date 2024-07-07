@@ -14,6 +14,7 @@ import PhotoComments from "./PhotoComments";
 import Title from "../../ui/typography/Title";
 import { UserContext } from "../../UserContext";
 import PhotoDelete from "./PhotoDelete";
+import Image from "../Helpers/Image";
 
 const PhotoContent = ({ data }) => {
   const { photo, comments } = data;
@@ -22,7 +23,7 @@ const PhotoContent = ({ data }) => {
   return (
     <PhotoContentWrapper>
       <ImageContainer>
-        <img src={photo.src} alt={photo.title} />
+        <Image src={photo.src} alt={photo.title} />
       </ImageContainer>
 
       <ImageDetails>
