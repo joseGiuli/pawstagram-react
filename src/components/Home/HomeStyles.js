@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { SectionAnimated } from "../../styles/GlobalStyles";
+import { Container } from "../../styles/GlobalStyles";
 
-export const Section = styled(SectionAnimated)`
-  padding-inline: 0;
+export const SectionHome = styled.section`
+  padding: 3rem 1rem;
 `;

@@ -1,15 +1,16 @@
 import React from "react";
 import Feed from "../Feed/Feed";
-import { Section } from "./HomeStyles";
+import { SectionHome } from "./HomeStyles";
+
 import { Container } from "../../styles/GlobalStyles";
 
 const Home = () => {
   return (
-    <Section>
+    <SectionHome>
       <Container>
         <Feed />
       </Container>
-    </Section>
+    </SectionHome>
   );
 };
 
