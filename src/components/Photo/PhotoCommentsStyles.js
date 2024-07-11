@@ -63,6 +63,10 @@ export const EnviarSVG = styled(EnviarAsset)`
 export const CommentList = styled.ul`
   overflow-y: auto;
   word-break: break-all;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 `;
 
 export const CommentItem = styled.li`

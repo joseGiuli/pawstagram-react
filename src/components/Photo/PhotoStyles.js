@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import visualizacaoBlack from "../../assets/visualizacao-black.svg";
 
-export const PhotoWrapper = styled.div``;
+export const PhotoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+`;
 
 export const PhotoContentWrapper = styled.div`
   position: absolute;
@@ -26,6 +31,23 @@ export const PhotoContentWrapper = styled.div`
     grid-template-columns: minmax(20rem, 40rem);
   }
 
+  ${(props) =>
+    props.single &&
+    `
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    height: auto;
+    overflow-y: auto;
+    height: max-content;
+    box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.15);
+  `}
+
   @keyframes scaleUp {
     to {
       opacity: initial;
@@ -42,6 +64,15 @@ export const ImageContainer = styled.div`
       grid-row: 1;
     }
   }
+
+  ${(props) =>
+    props.single &&
+    `
+      grid-row: 1;
+      max-width: 600px;
+  
+   
+  `}
 `;
 
 export const ImageDetails = styled.div`

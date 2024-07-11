@@ -16,13 +16,13 @@ import { UserContext } from "../../UserContext";
 import PhotoDelete from "./PhotoDelete";
 import Image from "../Helpers/Image";
 
-const PhotoContent = ({ data }) => {
+const PhotoContent = ({ data, single }) => {
   const { photo, comments } = data;
   const user = React.useContext(UserContext);
 
   return (
-    <PhotoContentWrapper>
-      <ImageContainer>
+    <PhotoContentWrapper single={single}>
+      <ImageContainer single={single}>
         <Image src={photo.src} alt={photo.title} />
       </ImageContainer>
 
