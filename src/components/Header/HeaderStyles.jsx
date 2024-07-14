@@ -33,15 +33,17 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavbarLink = styled(Link)`
-  color: red;
+  color: ${(props) => props.theme.colors.black};
+  transition: all 0.2s;
+
+  font-weight: 500;
 
   &:hover,
   &:focus {
-    scale: 1.1;
-    opacity: 0.9;
-    transition: ease-in 0.2s;
+    opacity: 0.75;
+    transition: all 0.2s;
   }
   &:active {
-    color: red;
+    color: ${(props) => props.theme.colors.black};
   }
 `;

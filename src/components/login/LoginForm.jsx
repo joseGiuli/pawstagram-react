@@ -28,7 +28,7 @@ const LoginForm = () => {
       <LoginFormStyled action="" onSubmit={handleSubmit}>
         <Input label="Usuario" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
-        <Link to="/esqueci-a-senha" className="esqueci">
+        <Link to="esqueci-a-senha" className="esqueci">
           Esqueci a senha
         </Link>
         {loading ? (
@@ -39,8 +39,7 @@ const LoginForm = () => {
         <Error error={error} />
       </LoginFormStyled>
       <RegistrarWrapper>
-        Não tem uma conta?{" "}
-        <Link to="/login/criar-conta">Registre-se agora!</Link>
+        Não tem uma conta? <Link to="criar-conta">Registre-se agora!</Link>
       </RegistrarWrapper>
     </SectionAnimated>
   );
