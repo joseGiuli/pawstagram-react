@@ -9,6 +9,7 @@ import { PHOTO_POST } from "../../Api";
 import { useNavigate } from "react-router-dom";
 import { FormStyled } from "../../styles/GlobalStyles";
 import Error from "../Helpers/Error";
+import Head from "../Helpers/Head";
 
 const UserPhotoPost = () => {
   const nome = useForm();
@@ -45,6 +46,7 @@ const UserPhotoPost = () => {
 
   return (
     <SectionStyled>
+      <Head title="Postar" />
       <FormStyled onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="nome" {...nome} />
         <Input label="Peso" type="number" name="peso" {...peso} />

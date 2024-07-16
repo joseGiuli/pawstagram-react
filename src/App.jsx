@@ -12,33 +12,36 @@ import ProtectedRoute from "./components/Helpers/ProtectedRoute";
 import Photo from "./components/Photo/Photo";
 import UserProfile from "./components/User/UserProfile";
 import NotFound from "./components/NotFound";
+import { MainBody, MainStyled } from "./AppStyles";
 
 const App = () => {
   return (
-    <>
+    <MainStyled>
       <GlobalStyles />
       <BrowserRouter>
         <UserStorage>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login/*" element={<Login />} />
-            <Route
-              path="/conta/*"
-              element={
-                <ProtectedRoute>
-                  <User />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/foto/:id" element={<Photo />} />
-            <Route path="/perfil/:user" element={<UserProfile />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          {/* <Footer /> */}
+          <MainBody>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login/*" element={<Login />} />
+              <Route
+                path="/conta/*"
+                element={
+                  <ProtectedRoute>
+                    <User />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/foto/:id" element={<Photo />} />
+              <Route path="/perfil/:user" element={<UserProfile />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </MainBody>
+          <Footer />
         </UserStorage>
       </BrowserRouter>
-    </>
+    </MainStyled>
   );
 };
 

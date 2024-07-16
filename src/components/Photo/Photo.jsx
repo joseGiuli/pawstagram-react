@@ -7,6 +7,7 @@ import Error from "../Helpers/Error";
 import Loading from "../Helpers/Loading";
 import PhotoContent from "./PhotoContent";
 import { Container } from "../../styles/GlobalStyles";
+import Head from "../Helpers/Head";
 
 const Photo = () => {
   const { id } = useParams();
@@ -22,6 +23,7 @@ const Photo = () => {
   if (data)
     return (
       <PhotoWrapper>
+        <Head title={data.photo.title} />
         <Container>
           <PhotoContent single={true} data={data} />
         </Container>

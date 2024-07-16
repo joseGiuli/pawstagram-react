@@ -8,6 +8,7 @@ import useFetch from "../../Hooks/useFetch";
 import { PASSWORD_LOST } from "../../Api";
 import Error from "../Helpers/Error";
 import Paragraph from "../../ui/typography/Paragraph";
+import Head from "../Helpers/Head";
 
 const LoginPasswordLost = () => {
   const login = useForm();
@@ -27,6 +28,7 @@ const LoginPasswordLost = () => {
 
   return (
     <SectionAnimated>
+      <Head title="Perdi a senha" />
       <Title margin="0 0 2.5rem">Perdeu a senha?</Title>
       {data ? (
         <Paragraph color="green" weight="500">

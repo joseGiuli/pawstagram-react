@@ -8,6 +8,7 @@ import Error from "../Helpers/Error";
 import { RegistrarWrapper, LoginFormStyled } from "./LoginFormStyles";
 import Title from "../../ui/typography/Title";
 import { SectionAnimated } from "../../styles/GlobalStyles";
+import Head from "../Helpers/Head";
 
 const LoginForm = () => {
   const username = useForm();
@@ -24,6 +25,7 @@ const LoginForm = () => {
 
   return (
     <SectionAnimated>
+      <Head title="Login" />
       <Title margin="0 0 1.5rem">Login</Title>
       <LoginFormStyled action="" onSubmit={handleSubmit}>
         <Input label="Usuario" type="text" name="username" {...username} />

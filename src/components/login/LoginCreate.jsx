@@ -13,6 +13,7 @@ import { USER_POST } from "../../Api";
 import Button from "../Forms/Button/Button";
 import { UserContext } from "../../UserContext";
 import Error from "../Helpers/Error";
+import Head from "../Helpers/Head";
 
 const LoginCreate = () => {
   const username = useForm();
@@ -38,6 +39,7 @@ const LoginCreate = () => {
 
   return (
     <SectionAnimated>
+      <Head title="Criar conta" />
       <Title>Cadastro</Title>
       <FormStyled onSubmit={handleSubmit}>
         <Input label="Usuario" type="text" name="username" {...username} />
