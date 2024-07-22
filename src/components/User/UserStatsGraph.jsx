@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionAnimated } from "../../styles/GlobalStyles";
-import { GraphContent, GraphItem, GraphWrapper } from "./UserStatsGraphStyles";
+import { GraphItem, GraphWrapper } from "./UserStatsGraphStyles";
 import Paragraph from "../../ui/typography/Paragraph";
 import { VictoryBar, VictoryPie, VictoryChart } from "victory";
 
@@ -22,6 +22,12 @@ const UserStatsGraph = ({ data }) => {
     setGraph(graphData);
   }, [data]);
 
+  if (total === 0)
+    return (
+      <Paragraph weight="500" margin="1rem 0 0">
+        Faça uma postagem para ter acesso às estatísticas.
+      </Paragraph>
+    );
   return (
     <SectionAnimated>
       <GraphWrapper>

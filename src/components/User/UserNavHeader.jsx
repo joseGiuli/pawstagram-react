@@ -43,8 +43,12 @@ const UserNavHeader = () => {
   }, [pathname]);
 
   function handleLogout() {
-    userLogout();
-    navigate("/login");
+    const confirm = window.confirm("Você tem certeza que quer sair?");
+
+    if (confirm) {
+      userLogout();
+      navigate("/login");
+    }
   }
 
   return (

@@ -1,5 +1,7 @@
 import React from "react";
 import { Container } from "../../styles/GlobalStyles";
+import { Section } from "./UserStyles";
+
 import UserHeader from "./UserHeader";
 import { Routes, Route } from "react-router-dom";
 import UserPhotoPost from "./UserPhotoPost";
@@ -13,18 +15,18 @@ const User = () => {
   const { data } = React.useContext(UserContext);
 
   return (
-    <section>
+    <Section>
       <Container>
         <Head title="Minha conta" />
         <UserHeader />
         <Routes>
-          <Route path="/" element={<Feed user={data.id} />} />
+          <Route path="feed" element={<Feed user={data.id} />} />
           <Route path="postar" element={<UserPhotoPost />} />
           <Route path="estatisticas" element={<UserStats />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
-    </section>
+    </Section>
   );
 };
 

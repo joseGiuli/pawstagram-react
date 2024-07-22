@@ -13,7 +13,7 @@ import LoginPasswordReset from "./LoginPasswordReset";
 const Login = () => {
   const { login } = React.useContext(UserContext);
 
-  if (login === true) return <Navigate to="/conta" />;
+  if (login === true) return <Navigate to="/conta/feed" />;
   return (
     <LoginSection>
       <LoginWrapper>

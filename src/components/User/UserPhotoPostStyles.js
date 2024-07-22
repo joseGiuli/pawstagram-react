@@ -12,6 +12,10 @@ export const SectionStyled = styled(SectionAnimated)`
   ${FormStyled} {
     gap: 1.5rem;
   }
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ImagePreview = styled.div`

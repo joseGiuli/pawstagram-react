@@ -20,13 +20,13 @@ const Header = () => {
           </NavbarLink>
           {data ? (
             <>
-              <NavbarLink to="/conta" className="login">
+              <NavbarLink to="/conta/feed">
                 <strong>{data.nome}</strong>
                 <UsuarioSVG />
               </NavbarLink>
             </>
           ) : (
-            <NavbarLink to="/login" className="login">
+            <NavbarLink to="/login">
               Login / Criar conta
               <UsuarioSVG />
             </NavbarLink>

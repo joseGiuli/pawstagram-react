@@ -6,7 +6,8 @@ import Loading from "../Helpers/Loading";
 import { STATS_GET } from "../../Api";
 import Error from "../Helpers/Error";
 import Title from "../../ui/typography/Title";
-import UserStatsGraph from "./UserStatsGraph";
+
+const UserStatsGraph = React.lazy(() => import("./UserStatsGraph"));
 
 const UserStats = () => {
   const { data, error, loading, request } = useFetch();
@@ -21,12 +22,13 @@ const UserStats = () => {
 
   if (loading) return <Loading />;
   if (error) return <Error error={error} />;
+
   if (data)
     return (
-      <div>
+      <React.Suspense fallback={<Loading />}>
         <Head title="Estatísticas" />
         <UserStatsGraph data={data} />
-      </div>
+      </React.Suspense>
     );
   else return null;
 };

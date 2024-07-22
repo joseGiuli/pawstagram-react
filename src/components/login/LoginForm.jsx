@@ -38,7 +38,7 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error} />
+        <Error error={error && "Dados incorretos."} />
       </LoginFormStyled>
       <RegistrarWrapper>
         Não tem uma conta? <Link to="criar-conta">Registre-se agora!</Link>

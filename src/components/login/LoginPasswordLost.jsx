@@ -56,14 +56,3 @@ const LoginPasswordLost = () => {
 };
 
 export default LoginPasswordLost;
-
-{
-  /* {loading ? (
-          <Button disabled>Cadastrando...</Button>
-        ) : (
-          <Button>Cadastrar</Button>
-        )}
-        <Error error={error} />
-
-        */
-}

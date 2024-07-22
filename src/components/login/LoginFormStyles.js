@@ -33,20 +33,3 @@ export const LoginFormStyled = styled(FormStyled)`
     }
   }
 `;
-
-export const FormWrapper = styled.div`
-  /* min-height: 100vh;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-
-  display: grid;
-  border: solid 1px #f1f1f1;
-  border-radius: 12px;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  width: min(100%, 1200px);
-  margin: 0 auto;
-
-  @media (max-width: 64rem) {
-    grid-template-columns: 1fr;
-  } */
-`;
