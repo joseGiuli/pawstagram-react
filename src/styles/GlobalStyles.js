@@ -9,10 +9,15 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     color: ${(props) => props.theme.colors.black};
-    
-
-    
   }
+
+
+//Victory 
+
+.VictoryContainer {
+  height: initial !important;
+}
+
 
   body {
     padding-top: 4rem;
