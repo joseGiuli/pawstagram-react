@@ -4,6 +4,7 @@ import useFetch from "../../Hooks/useFetch";
 import { PHOTO_GET } from "../../Api";
 import Loading from "../Helpers/Loading";
 import PhotoContent from "../Photo/PhotoContent";
+import Error from "../Helpers/Error";
 
 const FeedModal = ({ photo, setModalPhoto }) => {
   const { data, error, loading, request } = useFetch();

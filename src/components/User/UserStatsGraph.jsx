@@ -25,7 +25,8 @@ const UserStatsGraph = ({ data }) => {
   if (total === 0)
     return (
       <Paragraph weight="500" margin="1rem 0 0">
-        Faça uma postagem para ter acesso às estatísticas.
+        Você ainda não tem visualizações ou ainda não tem nenhuma postagem para
+        ter acesso às estatísticas.
       </Paragraph>
     );
   return (

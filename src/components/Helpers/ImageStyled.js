@@ -15,6 +15,7 @@ export const Imagem = styled.img`
 export const Skeleton = styled.div`
   grid-area: 1/1;
   position: relative;
+  min-height: max-content;
   height: 100%;
   background-image: linear-gradient(90deg, #eee 0px, #fff 50%, #eee 100%);
   background-color: #eee;

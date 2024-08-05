@@ -6,6 +6,7 @@ import Error from "../Helpers/Error";
 import Loading from "../Helpers/Loading";
 import { ListWrapper } from "./FeedPhotosStyles";
 import { Container } from "../../styles/GlobalStyles";
+import Paragraph from "../../ui/typography/Paragraph";
 
 const FeedPhotos = ({ setModalPhoto, user, page, setInfinite }) => {
   const { data, loading, error, request } = useFetch();
@@ -22,6 +23,8 @@ const FeedPhotos = ({ setModalPhoto, user, page, setInfinite }) => {
 
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
+  if (data === null) return <Paragraph>Nenhuma publicação ainda</Paragraph>;
+  if (data.length === 0) return <Paragraph>Nenhuma publicação ainda</Paragraph>;
   if (data)
     return (
       <ListWrapper>

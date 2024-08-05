@@ -40,8 +40,8 @@ const PhotoContent = ({ data, single }) => {
           <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
         </Titulo>
         <Atributos>
-          <Item>{photo.peso}kg</Item>
-          <Item>{photo.peso}anos</Item>
+          <Item>{photo.peso} kg</Item>
+          <Item>{photo.idade} anos</Item>
         </Atributos>
         <PhotoComments id={photo.id} comments={comments} />
       </ImageDetails>

@@ -10,10 +10,8 @@ const FeedPhotosItem = ({ photo, setModalPhoto }) => {
   return (
     <ListItem onClick={handleClick}>
       <Image src={photo.src} alt={photo.title} />
-
       <span>
         <VisualizacaoSVG />
-
         {photo.acessos}
       </span>
     </ListItem>
